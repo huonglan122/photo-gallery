@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh Hoa Ẩm Thực Hà Nội - Thư Viện Ảnh Tương Tác</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body onload="initializeGallery()">
+
+    <header>
+        <h1>Tinh Hoa Ẩm Thực Hà Nội</h1>
+        <p class="subtitle">Thư viện ảnh tương tác hỗ trợ tiếp cận bàn phím và trình đọc màn hình</p>
+    </header>
+
+    <!-- Vùng hiển thị ảnh phóng to và thông tin món ăn -->
+    <main>
+        <div id="image" role="region" aria-live="polite">
+            Rê chuột hoặc dùng phím Tab để khám phá các món ăn Hà Nội.
+        </div>
+
+        <!-- Danh sách các món ăn Hà Nội -->
+        <section class="gallery" aria-label="Danh sách món ăn Hà Nội">
+            <figure class="preview">
+                <img src="images/pho-bo.jpg" 
+                     alt="Phở bò Hà Nội với nước dùng trong thanh ngọt, bánh phở dẻo mềm và thịt bò tươi ngon"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+
+            <figure class="preview">
+                <img src="images/bun-cha.jpg" 
+                     alt="Bún chả Hà Nội gồm thịt chả nướng than hoa thơm xém, bún tươi và nước chấm chua ngọt"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+
+            <figure class="preview">
+                <img src="images/cha-ca.jpg" 
+                     alt="Chả cá Lả Vọng chiên vàng ươm ăn kèm hành lá, thì là, bún tươi và mắm tôm đậm đà"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+
+            <figure class="preview">
+                <img src="images/bun-thang.jpg" 
+                     alt="Bún thang Hà Nội tinh tế với trứng tráng mỏng, giò lụa, thịt gà xé và nước dùng thanh ngọt"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+
+            <figure class="preview">
+                <img src="images/banh-cuon.jpg" 
+                     alt="Bánh cuốn Thanh Trì mỏng dẻo rắc hành phi vàng rụm, ăn kèm chả quế thơm phức"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+
+            <figure class="preview">
+                <img src="images/banh-com.jpg" 
+                     alt="Bánh cốm Hà Nội màu xanh ngọc bích, nhân đậu xanh dừa dẻo thơm hương lúa non"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+
+            <figure class="preview">
+                <img src="images/ca-phe-trung.jpg" 
+                     alt="Cà phê trứng béo ngậy với lớp kem trứng đánh bông mịn trên cốt cà phê phin đậm đà"
+                     onmouseover="upDate(this)" 
+                     onmouseleave="unDo()" 
+                     onfocus="upDate(this)" 
+                     onblur="unDo()">
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>Bài thực hành Xây dựng ứng dụng Web - Đại học Phenikaa</p>
+    </footer>
+
+</body>
+</html>
