@@ -37,7 +37,7 @@ function unDo(previewPic) {
     // 1. Trả ảnh lớn về trạng thái ban đầu
     const displayDiv = document.getElementById('image');
     displayDiv.style.backgroundImage = "url('')";
-    displayDiv.innerText = "Rê chuột hoặc dùng phím Tab để khám phá các món ăn Hà Nội.";
+    displayDiv.innerText = "Di chuột vào ảnh hoặc dùng phím Tab để khám phá các món ăn Hà Nội.";
 
     // 2. Ẩn chữ mô tả bên dưới ảnh nhỏ
     if (previewPic) {
