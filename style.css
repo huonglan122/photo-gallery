@@ -1,7 +1,7 @@
-/* Styling tổng thể chuẩn Accessibility */
+/* Styling tổng thể với màu nền nâu nhạt dịu mắt */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #faf6f0;
+    background-color: #eaddca; /* Màu nâu nhạt/kem gỗ ấm áp, giảm chói mắt */
     color: #2b2b2b;
     margin: 0;
     padding: 20px;
@@ -9,17 +9,17 @@ body {
 }
 
 header h1 {
-    color: #8b0000; /* Đỏ đô hoài cổ Hà Nội */
+    color: #8b0000; /* Đỏ đô truyền thống */
     margin-bottom: 5px;
 }
 
 .subtitle {
-    color: #555;
+    color: #4a3b32; /* Nâu đậm nhẹ hài hòa với màu nền */
     font-size: 0.95rem;
     margin-bottom: 25px;
 }
 
-/* Khung hiển thị ảnh lớn */
+/* Khung hiển thị ảnh lớn phía trên */
 #image {
     width: 85%;
     max-width: 850px;
@@ -45,32 +45,62 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    align-items: flex-start;
+    gap: 20px 15px;
     max-width: 1000px;
     margin: 0 auto;
 }
 
+/* Khung chứa từng ảnh nhỏ */
+.preview {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 160px;
+    position: relative;
+}
+
 .preview img {
-    width: 150px;
+    width: 100%;
     height: 110px;
     object-fit: cover;
-    border: 3px solid #d7ccc8;
+    border: 3px solid #bcaaa4; /* Viền nâu xám nhạt đồng bộ */
     border-radius: 8px;
     cursor: pointer;
     transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-/* Hiệu ứng tương tác Chuột và Bàn Phím (Accessibility focus outline) */
+/* Viền Highlight khi hover / Tab keyboard (Accessibility) */
 .preview img:hover,
 .preview img:focus {
     border-color: #8b0000;
-    outline: 4px solid #ffb300; /* Đường viền nổi bật bắt buộc cho WAVE/AxE */
+    outline: 4px solid #ffb300; /* Viền vàng nổi bật vượt qua bài test Wave/AxE */
     outline-offset: 2px;
-    transform: scale(1.08);
+    transform: scale(1.05);
+}
+
+/* Chữ mô tả món ăn ngay dưới ảnh nhỏ */
+.caption {
+    display: none; /* Ẩn mặc định, chỉ hiện khi di chuột hoặc tab vào */
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #8b0000; /* Tone màu đỏ đô nổi bật, cùng tone tiêu đề */
+    text-align: center;
+    line-height: 1.3;
+    word-wrap: break-word;
+    width: 100%;
+    background-color: #fff8f0; /* Nền kem ngà giúp chữ đỏ đọc rất rõ */
+    padding: 6px 8px;
+    border-radius: 6px;
+    border: 1px solid #d7ccc8;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
 }
 
 footer {
     margin-top: 40px;
     font-size: 0.85rem;
-    color: #666;
+    color: #5d4037;
 }
